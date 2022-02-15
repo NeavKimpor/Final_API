@@ -1,0 +1,24 @@
+<form>
+  <div class="mb-3">
+    <label for="comments" class="form-label">ID</label>
+    <input type="text" class="form-control" [(ngModel)]="id" name="id">
+  </div>
+  <div class="mb-3">
+    <label for="comments" class="form-label">Title</label>
+    <input type="text" class="form-control" [(ngModel)]="author" name="title">
+  </div>
+  <div class="mb-3">
+    <label for="comments" class="form-label">Author</label>
+    <input type="text" class="form-control" [(ngModel)]="author" name="author">
+  </div>
+  <div class="mb-3">
+    <label for="comments" class="form-label">Category</label>
+    <input type="text" class="form-control" [(ngModel)]="author" name="comments">
+  </div>
+  <button (click)="addInspection()" *ngIf="inspection.id==0" class="btn btn-primary">
+    Add
+  </button>
+  <button (click)="updateInspection()" *ngIf="inspection.id!=0" class="btn btn-primary">
+    Update
+  </button>
+</form>
